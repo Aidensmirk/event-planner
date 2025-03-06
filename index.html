@@ -109,6 +109,8 @@
         <input type="date" id="date" name="date" required>
         <label for="location">Location:</label>
         <input type="text" id="location" name="location" required>
+        <label for="attendees">Attendees</label>
+        <input type="text" id="attendees" name="attendees" required>
         <button type="submit">Add Event</button>
     </form>
     <h2>Remove Event</h2>
@@ -136,7 +138,7 @@
             },
             {
                 title: "Baby shower",
-                date: new Date("2025-03-05"),
+                date: new Date("2025-03-08"),
                 location: "Kisumu",
                 attendees: new Set(["Eve", "Frank"])
             }
@@ -152,6 +154,7 @@
             }).join("");
 
             document.getElementById("next7DaysEvents").innerHTML = next7DaysEvents;
+            console.log(next7DaysEvents,'events')
         }
         function updateEventDetailsTable() {
             const eventDetailsTable = `
